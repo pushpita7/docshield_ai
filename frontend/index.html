@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocShield AI | Document Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="/">DocShield<span> AI</span></a>
+        <span class="status"><span class="dot"></span> Document Screening</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">DOCUMENT INTELLIGENCE</p>
+            <h1>Trust documents.<br><span>Verify the evidence.</span></h1>
+            <p class="subtitle">
+                Upload a certificate, PDF, or scanned image for preliminary
+                document screening and metadata analysis.
+            </p>
+        </section>
+
+        <section class="upload-card">
+            <h2>Analyze your document</h2>
+            <p class="muted">Supported: PDF, PNG, JPG, JPEG · Maximum 10 MB</p>
+
+            <form id="uploadForm">
+                <label class="drop-zone" for="document">
+                    <span class="upload-icon">↑</span>
+                    <strong id="fileLabel">Choose a document to analyze</strong>
+                    <span class="muted">Click here to browse files</span>
+                    <input
+                        id="document"
+                        type="file"
+                        accept=".pdf,.png,.jpg,.jpeg"
+                        required
+                    >
+                </label>
+
+                <button id="analyzeBtn" type="submit">Analyze document</button>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="results" class="results" hidden>
+            <h2>Screening results</h2>
+            <div id="resultContent"></div>
+        </section>
+
+        <p class="disclaimer">
+            DocShield AI provides preliminary screening, not definitive proof
+            of authenticity or fraud. Do not upload confidential documents
+            without permission.
+        </p>
+    </main>
+
+    <footer>DocShield AI · Document integrity screening</footer>
+    <script src="script.js"></script>
+</body>
+</html>
